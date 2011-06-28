@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ page.title }}</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  
+  <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/screen.css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/print.css" media="print" />
+
+  <script type="text/javascript" src="/js/libs/modernizr.js"></script>
+  <script type="text/javascript" src="/js/loader.js"></script>
+</head>
+<!--[if IE 8]> <body class="ie ie8"> <![endif]-->
+<!--[if IE 9]> <body class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+
+<header>
+  <div id="logo">
+    <a href="http://{{ site.url }}" title="Redime">
+      <img src="/images/logo.png" alt="Redime" />
+    </a>
+  </div>
+  
+  <div id="navigation">
+    <div id="site-menu">
+      <a href="#">início</a> |
+      <a href="#">blog</a> |
+      <a href="#">open source</a>
+    </div>
+    
+    <!-- Page navigator -->
+    <nav>
+      <ul>
+        <li
+          data-description="Produtos comercializados pela Redime.">
+          <a href="#">Produtos</a>
+          <div>Em breve.</div>
+        </li>
+
+        <li
+          data-description="Serviços fornecidos pela Redime.">
+          <a href="#">Serviços</a>
+          <div>Em breve.</div>
+        </li>
+
+        <li
+          data-description="Treinamento nos produtos Redime.">
+          <a href="#">Treinamento</a>
+          <div>Em breve.</div>
+        </li>
+
+        <li
+          data-description="O nosso suporte.">
+          <a href="#">Suporte</a>
+          <div>Em breve.</div>
+        </li>
+
+        <li
+          data-description="A melhor empresa do mundo!">
+          <a href="#">Institucional</a>
+          <div>Em breve.</div>
+        </li>
+      </ul>
+    </nav>
+    
+  </div>
+</header>
+
+<div id="contents">
+{{ content }}
+</div>
+
+<footer>
+  <div id="navigation-path">
+    <div>
+      <a id="logo" href="http://{{ site.url }}">&nbsp;</a>
+      <span>
+        <a href="http://{{ site.url }}" title="Início" rel="nofollow">Início</a>
+      {% for link in page.path %}
+        <a href="http://{{ site.url }}/{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+      {% endfor %}
+      </span>
+      <span><a href="#">Área de Clientes</a></span>
+    </div>
+  </div>
+
+  <div id="footer-contents">
+    <div>
+      <h1>Compartilhe essa Ideia!</h1>
+
+      <p>Clique nos botões abaixo para compartilhar nosso website!</p>
+      
+      <!-- Facebook -->
+      <!--<iframe src="http://www.facebook.com/plugins/like.php?app_id=194843490565221&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FRedime%2F221362884563569&amp;send=false&amp;layout=box_count&amp;width=100&amp;show_faces=true&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:90px; margin-top: 2px;" allowTransparency="true"></iframe>-->
+      <!--<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=194843490565221&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Redime/221362884563569" send="false" layout="box_count" show_faces="true" action="like" font=""></fb:like>-->
+
+      <!-- Twitter -->
+      <!--<a href="http://twitter.com/share" class="twitter-share-button" data-text="Redime, desenvolvimento de software" data-count="vertical" data-via="DuduRMelo" data-lang="pt">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>-->
+      
+      <h1>Mantenha-se Informado</h1>
+      
+      <p id="stay-tune">
+        <a href="#"><img src="/images/social/facebook.png" /></a>
+        <a href="#"><img src="/images/social/twitter.png" /></a>
+        <a href="#"><img src="/images/social/rss.png" /></a>
+        <a href="#"><img src="/images/social/mail.png" /></a>
+      </p>
+    </div>
+    
+    <div>&nbsp;</div>
+    
+    <div>
+      <h1>Entre em contato</h1>
+      
+      <div class="vcard">
+        <div class="tel">
+          +55 (99) 3524 6473
+        </div>
+        
+        <div>
+          <img src="/images/social/mail-small.png" />
+          <span><a class="email" href="mailto:contato@redime.com.br">contato@redime.com.br</a></span>
+        </div>
+        
+        <a class="fn org url" href="http://www.redime.com.br/">Redime</a>
+        <div class="adr">
+          <div class="street-address">Rua Sergipe 171</div>
+          <div>
+            <span class="locality">Imperatriz</span>
+            <abbr class="region" title="Maranhão">MA</abbr>
+            <span class="postal-code">65903-340</span>
+          </div>
+          <div class="country-name">Brasil</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="copyright">
+    &copy; 2011 Redime. Todos os direitos reservados.
+  </div>
+</footer>
+</body>

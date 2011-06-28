@@ -1,0 +1,157 @@
+
+@import 'compass/css3/background-clip';
+@import 'compass/css3/box';
+@import 'compass/css3/box-sizing';
+@import 'compass/css3/images';
+
+div#contents {
+  background: {
+    color: $page-light-background;
+    image: url('/images/content-bottom-bg.png');
+    position: bottom center;
+    repeat: no-repeat;
+  }
+
+  border-top: 1px solid $cool-gray-03;
+}
+
+div#articles {
+  @include display-box;
+  @include box-align(center);
+  @include box-orient(vertical);
+  @include box-pack(start);
+
+  margin: $page-margin;
+  width: 100%;
+
+  h1 {
+    color: $cool-gray-07;
+    font: {
+      size: $font-size-header;
+      weight: $font-weight-demibold;
+    }
+    text-shadow: 1px 1px $light-text-shadow-color;
+  
+    margin: 0 0 10px 0;
+    padding: 0;
+  }
+  
+  & > * {
+    @include display-box;
+    @include box-align(top);
+    @include box-orient(horizontal);
+    @include box-pack(start);
+    
+    border-top: 1px solid $lighter-border-color;
+    border-bottom: 1px solid $darker-border-color;
+    
+    padding: 10px 0 10px 0;
+    width: $page-width;
+    
+    &:first-child {
+      border-top: none;
+    }
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  article {
+    padding-bottom: 20px;
+    overflow: hidden;
+    
+    & > h1 {
+      color: $blue-04;
+      font-size: $font-size-article-header;
+      margin: 0;
+    }
+  }
+  
+  section#about-us, section#work-with-us {
+    padding: 1px;
+
+    & > * {
+      margin: 10px 5px 10px 10px;
+    }
+  }
+
+  section#about-us {
+    background-color: transparent, $cool-gray-01;
+    border: 1px solid $darker-border-color;
+
+    @include background-clip((content-box, padding-box));
+    @include background-image(linear-gradient($cool-gray-02, rgba(255,255,255,0)), none);
+    @include box-flex(1);
+
+    .no-cssgradients.no-svg & {
+      background: {
+        color: $cool-gray-01;
+        image: url('/images/fallbacks/about-us-gradient.png');
+        repeat: no-repeat;
+        position: top;
+      }
+    }
+  }
+  
+  section#work-with-us {
+    padding: 5px 10px 0 10px;
+    width: 300px;
+    
+    @include box-flex(0);
+  }
+  
+  section#customers, section#news-and-articles {
+    padding-top: 0;
+    width: 450px;
+    
+    @include box-flex(1);
+  }
+  
+  section#customers {
+    border-right: 1px solid $darker-border-color;
+    
+    padding: 0 14px 0 10px;
+    
+    article {
+      clear: both;
+      display: block;
+      overflow: hidden;
+
+      img {
+        float: left;
+        margin-right: 10px;
+        overflow: hidden;
+      }
+      
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+  
+  section#news-and-articles {
+    border-left: 1px solid $lighter-border-color;
+    
+    padding: 0 10px 0 14px;
+
+    article {
+      float: right;
+      
+      width: 207px;
+      
+      &:first-child {
+        float: left;
+        padding-right: 10px !important;
+      }
+      
+      img {
+        margin-bottom: 10px;
+      }
+    } // article
+  } // #news-and-articles
+
+  .no-flexbox & {
+    overflow: hidden;
+  }
+} // contents

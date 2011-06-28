@@ -1,0 +1,126 @@
+
+@import 'compass/css3/border-radius';
+@import 'compass/css3/box-shadow';
+@import 'compass/css3/pie';
+
+div#slider-wrapper {
+  position: relative;
+  z-index: 1;
+
+  padding: 10px 0 10px 0;
+
+  height: 270px;
+  width: 100%;
+
+  .no-flexbox & {
+    z-index: 0;
+  }
+
+  div#slider {
+    background: $white;
+    
+    overflow: hidden;
+    position: relative;
+
+    margin: -30px auto;
+    padding: 2px;
+    
+    height: 300px;
+    width: 900px;
+
+    @include border-radius(3px);
+
+    .boxshadow & {
+      @include box-shadow(0 0 10px rgba(0,0,0,0.4));
+    }
+
+    .no-boxshadow & {
+      @include pie-element;
+      @include box-shadow(0 0 5px #555555);
+    }
+  }
+}
+
+.skin-slidedeck {
+  position: relative;
+  padding: 0;
+
+  @include box-shadow(0 0 5px rgba(0,0,0,0.2));
+  @include box-sizing(border-box);
+
+  dl.slidedeck {
+    position: relative;
+    
+    width: 100%;
+    height: 100%;
+    
+    margin: 0;
+    padding: 0;
+
+    & > dd {
+      height: 294px;
+      
+      overflow: hidden;
+      position: relative;
+      padding: 0;
+      margin: 0;
+    }
+
+    & > dt {
+      color: #505050;
+      cursor: pointer;
+      font: {
+        family: "Futura Bold", Arial, Helvetica, sans-serif;
+        size: 12px;
+        weight: bold;
+      }
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      
+      height: 43px;
+      line-height: 38px;
+      
+      position: relative;
+      margin: 0;
+      padding: 0;
+
+      &.spine {
+        &:hover {
+          background-position: center left;
+          color: black;
+
+          .index { color: black; }
+        }
+
+        &.active, &.active:hover {
+          background-position: bottom left;
+          cursor: default;
+          color: white;
+
+          .index {
+            color: white;
+            margin-bottom: 0;
+          }
+        }
+
+        .index {
+          color: #505050;
+          font: {
+            family: Arial, Helvetica, sans-serif;
+            size: 24px;
+            weight: normal;
+          }
+
+          margin-bottom: 2px;
+        }
+      }
+    } // dt
+
+    .activeCorner {
+      background-image: url('/images/slider/corner.png');
+
+      height: 25px;
+      width: 12px;
+    }
+  } // dl.slidedeck
+}

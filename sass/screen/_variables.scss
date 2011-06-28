@@ -1,0 +1,78 @@
+/**
+ * This file is used to configure the site styling, such as colors,
+ * fonts, and related configurations.
+ *
+ * @autor 	Carlos Eduardo Melo
+ * @version	24/06/2011, 0.1
+ */
+
+// Font Configuration
+
+$font-weight-bold: 700;
+$font-weight-demibold: 600;
+$font-weight-regular: normal;
+
+$font-family-text: Open Sans, Arial, Liberation Sans, Lucida Sans, sans-serif;
+$font-family-headers: $font-family-text;
+
+$font-size-small: 9pt;
+$font-size-menu: 13px;
+
+$font-size-header: 22px;
+$font-size-article-header: 18px;
+
+// Page Configurations
+
+$page-dark-background: #333333;
+$page-light-background: #EEEDEE;
+$page-margin: 0 auto;
+$page-width: 900px;
+
+// Compass Configuration
+$pie-base-class: pie-element;
+$pie-behavior: url("/css/PIE.htc");
+
+$experimental-support-for-svg: true;
+
+// Colors
+
+$white: #FFFFFF;
+$black: #111111;
+
+$warm-gray: #817E7A;
+$cool-gray-01: #F4F4FF;
+$cool-gray-02: #DDE0E1;
+$cool-gray-03: #CFCFD9;
+$cool-gray-04: #ABABB3;
+$cool-gray-05: #7C7F80;
+$cool-gray-06: #626266;
+$cool-gray-07: #37373E;
+$cool-gray-08: #18181A;
+
+$blue-01: #0076E6;
+$blue-02: #004056;
+$blue-03: #00304F;
+$blue-04: #001A33;
+
+// Navbar
+
+$navbar-light-border-color: #CCC;
+$navbar-dark-border-color: #AFAFAF;
+
+// Contents
+
+$lighter-border-color: #FFFFFF;
+$darker-border-color: #CCCCCC;
+
+$light-text-shadow-color: #FFFFFF;
+
+// Footer
+$dark-text-shadow-color: $cool-gray-08;
+$footer-header-font-size: 11pt;
+
+$vcard-phone-font-size: 20pt;
+$vcard-email-font-size: 13pt;
+$vcard-name-font-size: 11pt;
+$vcard-address-font-size: 10pt;
+
+$copyright-font-size: 8pt;

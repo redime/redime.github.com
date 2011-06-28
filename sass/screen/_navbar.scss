@@ -1,0 +1,151 @@
+
+@import 'compass/css3/box';
+@import 'compass/css3/box-shadow';
+@import 'compass/css3/images';
+@import 'compass/css3/transition';
+
+nav {
+  background-color: $cool-gray-01;
+  border: {
+    top: 1px solid $navbar-light-border-color;
+    left: 1px solid $navbar-light-border-color;
+    bottom: 1px solid $navbar-dark-border-color;
+    right: 1px solid $navbar-dark-border-color;
+  }
+
+  display: inline-block;
+  margin: 10px 0 0 0;
+  padding: 0 0 1px 0;
+  position: relative;
+  z-index: 2;
+  
+  @include box-align(right);  
+  @include -redime-block-list(horizontal);
+  @include transition-property(opacity);
+  @include transition-duration(0.25s);
+  @include transition-timing-function(ease-in-out);
+
+  & > ul {
+    @include background-image(linear-gradient($cool-gray-01, $cool-gray-02));
+
+    .no-cssgradients.no-svg & {
+      background: {
+        image: url('/images/navbar-gradient.png');
+        position: top;
+        repeat: repeat-x;
+      }
+    }
+
+    & > li {
+      @include -redime-block-list(vertical);
+
+      &.selected {
+        background-color: $cool-gray-01;
+        
+        & > a { color: $cool-gray-07; }
+      }
+      
+      // First level link
+      & > a {
+        background-color: rgba(240,240,240,0);
+        color: $cool-gray-05;
+        font: {
+          size: $font-size-menu;
+          weight: $font-weight-demibold;
+        }
+        cursor: default;
+        text-decoration: none;
+        text-shadow: 1px 1px $light-text-shadow-color;
+        
+        padding: 4px 12px 4px 12px;
+        
+        &:hover {
+          background-color: $cool-gray-01;
+          color: $cool-gray-07;
+          text-decoration: none;
+        }
+      } // li > a
+
+      // Submenus
+      & > ul, & > div {
+        display: none;
+        margin-top: 1px;
+        position: absolute;
+        z-index: 1;
+      }
+
+      & > ul {
+        margin-left: 10px;
+
+        a {
+          color: $cool-gray-05;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    } // li
+  } // ul
+  
+  & > div.panel {
+    background-color: $cool-gray-01;
+    border: {
+      top: none;
+      left: 1px solid $navbar-light-border-color;
+      right: 1px solid $navbar-dark-border-color;
+      bottom: 1px solid $navbar-dark-border-color;
+    }
+    color: $cool-gray-01;
+
+    display: none;
+    height: 150px;
+    margin-left: -1px;
+    position: absolute;
+    z-index: -1;
+
+    @include box-shadow(0 0 10px rgba(0,0,0,0.2));
+
+    & > div {
+      background-color: $blue-03;
+
+      height: 148px;
+      width: 120px;
+      margin: 1px;
+
+      h1 {
+        font: {
+          size: $font-size-menu;
+          weight: $font-weight-demibold;
+        }
+
+        margin: 0;
+        padding: 20px 10px 5px 10px;
+      }
+
+      p {
+        font-size: $font-size-menu * 0.85;
+        margin: 0;
+        padding: 5px 10px 5px 10px;
+      }
+    } // & > div
+
+    &.right-align > div {
+      float: right;
+    }
+  }
+
+  .no-flexbox & {
+    position: inherit;
+
+    & > ul > li > ul,
+    & > ul > li > div {
+      z-index: 3;
+    }
+
+    & > div.panel {
+      z-index: 1;
+    }
+  }
+} // nav

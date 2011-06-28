@@ -1,0 +1,204 @@
+
+@import 'compass/css3/box';
+@import 'compass/css3/box-sizing';
+
+footer {
+  background: {
+    color: $page-dark-background;
+    image: url('/images/footer-bg.png');
+  }
+  display: block;
+
+  div#navigation-path {
+    background: {
+      color: transparent;
+      image: url('/images/footer-top.png');
+      position: center;
+      repeat: no-repeat;
+    }
+    text-align: center;
+    text-shadow: -1px -1px white;
+
+    & > div {
+      line-height: 28px;
+      margin: 0 auto;
+      padding: 0 10px 4px 10px;
+      text-align: left;
+      vertical-align: top;
+      
+      height: 30px;
+      width: $page-width;
+      
+      a {
+        color: $cool-gray-06;
+        text-decoration: none;
+        
+        &:hover {
+          color: $blue-03;
+          text-decoration: underline;
+        }
+      }
+      
+      a#logo {
+        background: {
+          image: url('/images/symbol-small.png');
+          position: top center;
+          repeat: no-repeat;
+        }
+        text-decoration: none;
+        opacity: 0.5;
+        
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+        height: 20px;
+        width: 30px;
+        
+        &:hover {
+          background-position: bottom center;
+          opacity: 1;
+        }
+      }
+      
+      span {
+        display: inline-block;
+        line-height: 30px;
+        vertical-align: middle;
+
+        margin: 0 5px 0 5px;
+
+        & > a:not(:first-child):before {
+          content: '>';
+          margin: 0 5px 0 5px;
+        }
+
+        &:last-child {
+          float: right;
+        }
+      }
+    } // > div
+  } // #navigation-path
+
+  div#footer-contents {
+    @include display-box;
+    @include box-align(top);
+    @include box-orient(horizontal);
+    @include box-pack(center);
+    
+    background-color: transparent;
+    color: $warm-gray;
+
+    margin: $page-margin;
+    padding: 10px 0 0 0;
+    
+    width: $page-width;
+    
+    .no-flexbox & {
+      overflow: hidden;
+    }
+
+    & > div {
+      width: 280px;
+      padding: 0 10px 10px 10px;
+      
+      @include box-flex(0);
+
+      iframe {
+        margin-left: 10px;
+        vertical-align: top;
+      }
+
+      p#stay-tune a {
+        opacity: 0.5;
+      
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    
+    h1 {
+      font-size: $footer-header-font-size;
+      text-transform: uppercase;
+      text-shadow: 1px 1px $dark-text-shadow-color;
+      
+      margin: 0;
+      padding: 15px 0 0 0;
+    }
+    
+    a {
+      color: $warm-gray;
+
+      &:hover {
+        color: $cool-gray-01;
+      }
+    }
+    
+    p {
+      font-size: $font-size-small;
+    }
+    
+    .vcard {
+      .tel {
+        font-size: $vcard-phone-font-size;
+        text-shadow: 1px 1px $dark-text-shadow-color;
+        
+        margin: 10px 0 10px 0;
+      }
+      
+      img {
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+      
+      img {
+        vertical-align: middle;
+      }
+
+      .email {
+        font-size: $vcard-email-font-size;
+        text-shadow: 1px 1px $dark-text-shadow-color;
+        
+        vertical-align: middle;
+      }
+      
+      .fn {
+        font-size: $vcard-name-font-size;
+        
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+      
+      .adr {
+        font-size: $vcard-address-font-size;
+        
+        & > * {
+          margin-bottom: 5px;
+        }
+      }
+      
+      .region {
+        margin-right: 10px;
+      }
+    } // .vcard
+
+    #fb-root {
+      display: inline-block;
+    }
+  } // #footer-contents
+
+  div#copyright {
+    border-top: 1px solid $cool-gray-08;
+    background-color: transparent;
+    color: $white;
+    font-size: $copyright-font-size;
+
+    @include box-sizing(border-box);
+
+    display: block;
+    margin: $page-margin;
+    padding: 10px;
+    width: $page-width;
+  }
+} // footer

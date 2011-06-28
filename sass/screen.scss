@@ -1,0 +1,60 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+//@import 'http://fonts.googleapis.com/css?family=Lato:regular,italic,bold';
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:regular,600,bold';
+
+@import 'compass/css3/transition';
+@import 'screen/variables';
+
+body {
+  background-color: $page-light-background;
+  color: $cool-gray-07;
+  font: {
+    family: $font-family-text;
+    size: $font-size-small;
+    weight: $font-weight-regular;
+  }
+  
+  min-width: 910px;
+  height: 100%;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  & > * {
+    text-align: center;
+    visibility: hidden;
+
+    & > * {
+      text-align: left;
+    }
+  }
+}
+
+h1 {
+  font-family: $font-family-headers;
+}
+
+a {
+  @include transition-property((color, background-color, opacity));
+  @include transition-duration(0.25s);
+  @include transition-timing-function(ease-in-out);
+
+  color: $cool-gray-07;
+
+  .ie & img {
+    border: none;
+  }
+}
+
+@import 'screen/util';
+
+@import 'screen/header';
+@import 'screen/navbar';
+@import 'screen/contents';
+@import 'screen/slider';
+@import 'screen/footer';

@@ -1,0 +1,65 @@
+
+@import 'compass/css3/box';
+@import 'compass/css3/box-sizing';
+@import 'compass/css3/images';
+
+header {
+  @include display-box;
+  @include box-align(center);
+  @include box-orient(horizontal);
+  @include box-pack(center);
+
+  background-color: $cool-gray-03;
+  border-bottom: 1px solid $page-light-background;
+
+  padding-bottom: 20px;
+  margin: $page-margin;
+  width: 100%;
+
+  @include background-image(linear-gradient($cool-gray-01, $cool-gray-03));
+  
+  .no-flexbox & {
+    overflow: hidden;
+
+    & > * {
+      margin-left: -5px;
+    }
+  }
+
+  div#logo {
+    margin: 0;
+    padding: 10px 0 10px 0;
+    width: $page-width * 0.3;
+
+    @include box-sizing(content-box);
+  }
+  
+  div#navigation {
+    text-align: right;
+    
+    padding: 10px 0 10px 0;
+    width: $page-width * 0.7;
+
+    @include box-sizing(content-box);
+    
+    & > * {
+      text-align: left;
+    }
+    
+    div#site-menu {
+      font-size: $font-size-small * 0.9;
+      text-align: right;
+      display: block;
+
+      a {
+        color: $cool-gray-06;
+        text-decoration: none;
+
+        &:hover {
+          color: $blue-03;
+          text-decoration: underline;
+        }
+      }
+    } // menu-i18n
+  } // navigation
+} // header
