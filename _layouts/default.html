@@ -11,7 +11,8 @@
   <script type="text/javascript" src="/js/libs/modernizr.js"></script>
   <script type="text/javascript" src="/js/loader.js"></script>
 </head>
-<!--[if lte IE 8]> <body class="ie ie8"> <![endif]-->
+<!--[if lte IE 7]> <body class="ie ie8 ie7"> <![endif]-->
+<!--[if IE 8]> <body class="ie ie8"> <![endif]-->
 <!--[if IE 9]> <body class="ie ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
 
@@ -30,6 +31,7 @@
     </div>
     
     <!-- Page navigator -->
+    <!--[if (gt IE 7)|!(IE)]><!-->
     <nav>
       <ul>
         <li
@@ -63,6 +65,7 @@
         </li>
       </ul>
     </nav>
+    <!--<![endif]-->
     
   </div>
 </header>

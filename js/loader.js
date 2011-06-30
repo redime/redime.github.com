@@ -45,7 +45,7 @@ Modernizr.load([
     }
   },
   {
-    load: ['/js/jquery.mousewheel.js', '/js/slidedeck.jquery.lite.js'],
+    load: ['/js/slidedeck.jquery.lite.js'],
     complete: function() {
       $(document).ready(function() {
         $('#slider').wrap('<div id="slider-wrapper" />');

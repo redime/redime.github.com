@@ -1,6 +1,7 @@
 
 @import 'compass/css3/border-radius';
 @import 'compass/css3/box-shadow';
+@import 'compass/css3/box-sizing';
 @import 'compass/css3/pie';
 
 div#slider-wrapper {
@@ -29,6 +30,14 @@ div#slider-wrapper {
     width: 900px;
 
     @include border-radius(3px);
+    @include box-sizing(border-box);
+
+    .ie7 & {
+      height: 296px;
+      width: 896px;
+
+      top: -30px;
+    }
 
     .boxshadow & {
       @include box-shadow(0 0 10px rgba(0,0,0,0.4));
@@ -36,17 +45,14 @@ div#slider-wrapper {
 
     .no-boxshadow & {
       @include pie-element;
-      @include box-shadow(0 0 5px #555555);
+      @include box-shadow(0 0 5px #555);
     }
   }
 }
 
 .skin-slidedeck {
-  position: relative;
-  padding: 0;
-
-  @include box-shadow(0 0 5px rgba(0,0,0,0.2));
-  @include box-sizing(border-box);
+  //position: relative;
+  //padding: 0;
 
   dl.slidedeck {
     position: relative;
