@@ -63,15 +63,19 @@ a {
 header {
   display: -moz-box;
   display: -webkit-box;
+  display: -ms-box;
   display: box;
   -moz-box-align: center;
   -webkit-box-align: center;
+  -ms-box-align: center;
   box-align: center;
   -moz-box-orient: horizontal;
   -webkit-box-orient: horizontal;
+  -ms-box-orient: horizontal;
   box-orient: horizontal;
   -moz-box-pack: center;
   -webkit-box-pack: center;
+  -ms-box-pack: center;
   box-pack: center;
   background-color: #cfcfd9;
   border-bottom: 1px solid #eeedee;
@@ -84,6 +88,7 @@ header {
   background-image: -webkit-linear-gradient(#f4f4ff, #cfcfd9);
   background-image: -moz-linear-gradient(#f4f4ff, #cfcfd9);
   background-image: -o-linear-gradient(#f4f4ff, #cfcfd9);
+  background-image: -ms-linear-gradient(#f4f4ff, #cfcfd9);
   background-image: linear-gradient(#f4f4ff, #cfcfd9);
 }
 /* line 21, ../sass/screen/_header.scss */
@@ -149,6 +154,7 @@ nav {
   z-index: 2;
   -moz-box-align: right;
   -webkit-box-align: right;
+  -ms-box-align: right;
   box-align: right;
   -moz-transition-property: opacity;
   -webkit-transition-property: opacity;
@@ -185,6 +191,7 @@ nav > ul {
   background-image: -webkit-linear-gradient(#f4f4ff, #dde0e1);
   background-image: -moz-linear-gradient(#f4f4ff, #dde0e1);
   background-image: -o-linear-gradient(#f4f4ff, #dde0e1);
+  background-image: -ms-linear-gradient(#f4f4ff, #dde0e1);
   background-image: linear-gradient(#f4f4ff, #dde0e1);
 }
 /* line 31, ../sass/screen/_navbar.scss */
@@ -211,11 +218,11 @@ nav > ul > li > ul > li a {
 nav > ul > li.selected {
   background-color: #f4f4ff;
 }
-/* line 44, ../sass/screen/_navbar.scss */
+/* line 45, ../sass/screen/_navbar.scss */
 nav > ul > li.selected > a {
   color: #37373e;
 }
-/* line 48, ../sass/screen/_navbar.scss */
+/* line 49, ../sass/screen/_navbar.scss */
 nav > ul > li > a {
   background-color: rgba(240, 240, 240, 0);
   color: #7c7f80;
@@ -226,33 +233,33 @@ nav > ul > li > a {
   text-shadow: 1px 1px white;
   padding: 4px 12px 4px 12px;
 }
-/* line 61, ../sass/screen/_navbar.scss */
+/* line 62, ../sass/screen/_navbar.scss */
 nav > ul > li > a:hover {
   background-color: #f4f4ff;
   color: #37373e;
   text-decoration: none;
 }
-/* line 69, ../sass/screen/_navbar.scss */
+/* line 70, ../sass/screen/_navbar.scss */
 nav > ul > li > ul, nav > ul > li > div {
   display: none;
   margin-top: 1px;
   position: absolute;
   z-index: 1;
 }
-/* line 76, ../sass/screen/_navbar.scss */
+/* line 77, ../sass/screen/_navbar.scss */
 nav > ul > li > ul {
   margin-left: 10px;
 }
-/* line 79, ../sass/screen/_navbar.scss */
+/* line 80, ../sass/screen/_navbar.scss */
 nav > ul > li > ul a {
   color: #7c7f80;
   text-decoration: none;
 }
-/* line 83, ../sass/screen/_navbar.scss */
+/* line 84, ../sass/screen/_navbar.scss */
 nav > ul > li > ul a:hover {
   text-decoration: underline;
 }
-/* line 91, ../sass/screen/_navbar.scss */
+/* line 92, ../sass/screen/_navbar.scss */
 nav > div.panel {
   background-color: #f4f4ff;
   border-top: none;
@@ -270,39 +277,39 @@ nav > div.panel {
   -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-/* line 109, ../sass/screen/_navbar.scss */
+/* line 110, ../sass/screen/_navbar.scss */
 nav > div.panel > div {
   background-color: #00304f;
   height: 148px;
   width: 120px;
   margin: 1px;
 }
-/* line 116, ../sass/screen/_navbar.scss */
+/* line 117, ../sass/screen/_navbar.scss */
 nav > div.panel > div h1 {
   font-size: 13px;
   font-weight: 600;
   margin: 0;
   padding: 20px 10px 5px 10px;
 }
-/* line 126, ../sass/screen/_navbar.scss */
+/* line 127, ../sass/screen/_navbar.scss */
 nav > div.panel > div p {
   font-size: 11.05px;
   margin: 0;
   padding: 5px 10px 5px 10px;
 }
-/* line 133, ../sass/screen/_navbar.scss */
+/* line 134, ../sass/screen/_navbar.scss */
 nav > div.panel.right-align > div {
   float: right;
 }
-/* line 138, ../sass/screen/_navbar.scss */
+/* line 139, ../sass/screen/_navbar.scss */
 .no-flexbox nav {
   position: inherit;
 }
-/* line 142, ../sass/screen/_navbar.scss */
+/* line 143, ../sass/screen/_navbar.scss */
 .no-flexbox nav > ul > li > ul, .no-flexbox nav > ul > li > div {
   z-index: 3;
 }
-/* line 146, ../sass/screen/_navbar.scss */
+/* line 147, ../sass/screen/_navbar.scss */
 .no-flexbox nav > div.panel {
   z-index: 1;
 }
@@ -320,15 +327,19 @@ div#contents {
 div#articles {
   display: -moz-box;
   display: -webkit-box;
+  display: -ms-box;
   display: box;
   -moz-box-align: center;
   -webkit-box-align: center;
+  -ms-box-align: center;
   box-align: center;
   -moz-box-orient: vertical;
   -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
   box-orient: vertical;
   -moz-box-pack: start;
   -webkit-box-pack: start;
+  -ms-box-pack: start;
   box-pack: start;
   margin: 0 auto;
   width: 100%;
@@ -346,15 +357,19 @@ div#articles h1 {
 div#articles > * {
   display: -moz-box;
   display: -webkit-box;
+  display: -ms-box;
   display: box;
   -moz-box-align: top;
   -webkit-box-align: top;
+  -ms-box-align: top;
   box-align: top;
   -moz-box-orient: horizontal;
   -webkit-box-orient: horizontal;
+  -ms-box-orient: horizontal;
   box-orient: horizontal;
   -moz-box-pack: start;
   -webkit-box-pack: start;
+  -ms-box-pack: start;
   box-pack: start;
   border-top: 1px solid white;
   border-bottom: 1px solid #cccccc;
@@ -404,9 +419,11 @@ div#articles section#about-us {
   background-image: -webkit-linear-gradient(#dde0e1, rgba(255, 255, 255, 0)), none;
   background-image: -moz-linear-gradient(#dde0e1, rgba(255, 255, 255, 0)), none;
   background-image: -o-linear-gradient(#dde0e1, rgba(255, 255, 255, 0)), none;
+  background-image: -ms-linear-gradient(#dde0e1, rgba(255, 255, 255, 0)), none;
   background-image: linear-gradient(#dde0e1, rgba(255, 255, 255, 0)), none;
   -moz-box-flex: 1;
   -webkit-box-flex: 1;
+  -ms-box-flex: 1;
   box-flex: 1;
 }
 /* line 87, ../sass/screen/_contents.scss */
@@ -422,6 +439,7 @@ div#articles section#work-with-us {
   width: 300px;
   -moz-box-flex: 0;
   -webkit-box-flex: 0;
+  -ms-box-flex: 0;
   box-flex: 0;
 }
 /* line 104, ../sass/screen/_contents.scss */
@@ -430,6 +448,7 @@ div#articles section#customers, div#articles section#news-and-articles {
   width: 450px;
   -moz-box-flex: 1;
   -webkit-box-flex: 1;
+  -ms-box-flex: 1;
   box-flex: 1;
 }
 /* line 111, ../sass/screen/_contents.scss */
@@ -511,15 +530,6 @@ div#slider-wrapper div#slider {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-/* line 37, ../sass/screen/_slider.scss */
-.no-boxshadow div#slider-wrapper div#slider {
-  behavior: url("/css/PIE.htc");
-  position: relative;
-  -moz-box-shadow: 0 0 5px #555555;
-  -webkit-box-shadow: 0 0 5px #555555;
-  -o-box-shadow: 0 0 5px #555555;
-  box-shadow: 0 0 5px #555555;
 }
 
 /* line 44, ../sass/screen/_slider.scss */
@@ -674,15 +684,19 @@ footer div#navigation-path > div span:last-child {
 footer div#footer-contents {
   display: -moz-box;
   display: -webkit-box;
+  display: -ms-box;
   display: box;
   -moz-box-align: top;
   -webkit-box-align: top;
+  -ms-box-align: top;
   box-align: top;
   -moz-box-orient: horizontal;
   -webkit-box-orient: horizontal;
+  -ms-box-orient: horizontal;
   box-orient: horizontal;
   -moz-box-pack: center;
   -webkit-box-pack: center;
+  -ms-box-pack: center;
   box-pack: center;
   background-color: transparent;
   color: #817e7a;
@@ -700,6 +714,7 @@ footer div#footer-contents > div {
   padding: 0 10px 10px 10px;
   -moz-box-flex: 0;
   -webkit-box-flex: 0;
+  -ms-box-flex: 0;
   box-flex: 0;
 }
 /* line 106, ../sass/screen/_footer.scss */
