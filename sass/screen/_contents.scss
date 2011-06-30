@@ -69,6 +69,7 @@ div#articles {
   }
   
   section#about-us, section#work-with-us {
+    display: block;
     padding: 1px;
 
     & > * {
@@ -102,9 +103,10 @@ div#articles {
   }
   
   section#customers, section#news-and-articles {
+    display: block;
     padding-top: 0;
     width: 450px;
-    
+
     @include box-flex(1);
   }
   
@@ -155,3 +157,24 @@ div#articles {
     overflow: hidden;
   }
 } // contents
+
+div#ff-01 {
+  width: 100%;
+  text-align: center;
+
+  div#line01 {
+    @include display-box;
+    @include box-align(center);
+    @include box-orient(vertical);
+    @include box-pack(start);
+    text-align: left;
+
+    margin: 0 auto;
+    width: 900px;
+
+    & > * {
+      //@include box-flex(0);
+      width: 450px;
+    }
+  }
+}

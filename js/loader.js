@@ -6,22 +6,6 @@
  * @version 23/06/2011, 0.1
  */
 
-// Google Web Fonts Loader
-if (Modernizr.fontface) {
-  WebFontConfig = {
-    google: { families: [ 'Open Sans:regular,600,bold' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })();
-}
-
 Modernizr.load([
   {
     // jQuery
@@ -30,17 +14,23 @@ Modernizr.load([
       if (!window.jQuery) {
         Modernizr.load('/js/libs/jquery.js');
       }
+
+      $(document).ready(function() {
+        
+      });
     }
   },
   {
     // Flexie
     test: Modernizr.flexbox,
-    nope: ['/js/libs/selectivizr.js', '/js/libs/flexie.js'],
+    load: ['/js/libs/flexie.js'],
     complete: function() {
       $(document).ready(function() {
-        $('body > *').hide();
-        $('body > *').css('visibility', 'visible');
-        $('body > *').fadeIn(250);
+        if (!Modernizr.flexbox) {
+          $('body > *').hide();
+          $('body > *').css('visibility', 'visible');
+          $('body > *').fadeIn(250);
+        }
       });
     }
   },
@@ -49,6 +39,7 @@ Modernizr.load([
     complete: function() {
       $(document).ready(function() {
         $('#slider').wrap('<div id="slider-wrapper" />');
+        $('#slider').fadeIn(250);
         $('.slidedeck').slidedeck({
           autoPlay: false,
           cycle: true,
@@ -117,3 +108,19 @@ Modernizr.load([
     }
   }
 ]);
+
+// Google Web Fonts Loader
+if (Modernizr.fontface) {
+  WebFontConfig = {
+    google: { families: [ 'Open Sans:regular,600,bold' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+}

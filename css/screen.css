@@ -2,7 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@import 'http://fonts.googleapis.com/css?family=Open+Sans:regular,600,bold';
 /**
  * This file is used to configure the site styling, such as colors,
  * fonts, and related configurations.
@@ -26,19 +25,22 @@ body {
 /* line 28, ../sass/screen.scss */
 body > * {
   text-align: center;
+}
+/* line 31, ../sass/screen.scss */
+.no-flexbox body > * {
   visibility: hidden;
 }
-/* line 32, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 body > * > * {
   text-align: left;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 h1 {
   font-family: Open Sans, Arial, Liberation Sans, Lucida Sans, sans-serif;
 }
 
-/* line 42, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 a {
   -moz-transition-property: color, background-color, opacity;
   -webkit-transition-property: color, background-color, opacity;
@@ -54,8 +56,8 @@ a {
   transition-timing-function: ease-in-out;
   color: #37373e;
 }
-/* line 49, ../sass/screen.scss */
-.ie a img {
+/* line 52, ../sass/screen.scss */
+a img {
   border: none;
 }
 
@@ -397,13 +399,14 @@ div#articles article > h1 {
 }
 /* line 71, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#about-us, div#articles section#work-with-us {
+  display: block;
   padding: 1px;
 }
-/* line 74, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 75, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#about-us > *, div#articles section#work-with-us > * {
   margin: 10px 5px 10px 10px;
 }
-/* line 79, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 80, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#about-us {
   background-color: transparent, #f4f4ff;
   border: 1px solid #cccccc;
@@ -426,14 +429,14 @@ div#articles section#about-us {
   -ms-box-flex: 1;
   box-flex: 1;
 }
-/* line 87, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 88, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 .no-cssgradients.no-svg div#articles section#about-us {
   background-color: #f4f4ff;
   background-image: url("/images/fallbacks/about-us-gradient.png");
   background-repeat: no-repeat;
   background-position: top;
 }
-/* line 97, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 98, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#work-with-us {
   padding: 5px 10px 0 10px;
   width: 300px;
@@ -442,8 +445,9 @@ div#articles section#work-with-us {
   -ms-box-flex: 0;
   box-flex: 0;
 }
-/* line 104, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 105, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#customers, div#articles section#news-and-articles {
+  display: block;
   padding-top: 0;
   width: 450px;
   -moz-box-flex: 1;
@@ -451,49 +455,81 @@ div#articles section#customers, div#articles section#news-and-articles {
   -ms-box-flex: 1;
   box-flex: 1;
 }
-/* line 111, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 113, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#customers {
   border-right: 1px solid #cccccc;
   padding: 0 14px 0 10px;
 }
-/* line 116, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 118, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#customers article {
   clear: both;
   display: block;
   overflow: hidden;
 }
-/* line 121, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 123, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#customers article img {
   float: left;
   margin-right: 10px;
   overflow: hidden;
 }
-/* line 127, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 129, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#customers article p {
   margin: 5px 0;
 }
-/* line 133, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 135, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#news-and-articles {
   border-left: 1px solid white;
   padding: 0 10px 0 14px;
 }
-/* line 138, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 140, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#news-and-articles article {
   float: right;
   width: 207px;
 }
-/* line 143, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 145, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#news-and-articles article:first-child {
   float: left;
   padding-right: 10px !important;
 }
-/* line 148, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 150, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 div#articles section#news-and-articles article img {
   margin-bottom: 10px;
 }
-/* line 154, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+/* line 156, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
 .no-flexbox div#articles {
   overflow: hidden;
+}
+
+/* line 161, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+div#ff-01 {
+  width: 100%;
+  text-align: center;
+}
+/* line 165, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+div#ff-01 div#line01 {
+  display: -moz-box;
+  display: -webkit-box;
+  display: -ms-box;
+  display: box;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -moz-box-pack: start;
+  -webkit-box-pack: start;
+  -ms-box-pack: start;
+  box-pack: start;
+  text-align: left;
+  margin: 0 auto;
+  width: 900px;
+}
+/* line 175, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_contents.scss */
+div#ff-01 div#line01 > * {
+  width: 450px;
 }
 
 /* line 7, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
@@ -551,7 +587,11 @@ div#slider-wrapper div#slider {
   box-shadow: 0 0 5px #555555;
 }
 
-/* line 57, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
+/* line 53, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
+.skin-slidedeck {
+  display: none;
+}
+/* line 56, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
 .skin-slidedeck dl.slidedeck {
   position: relative;
   width: 100%;
@@ -559,7 +599,7 @@ div#slider-wrapper div#slider {
   margin: 0;
   padding: 0;
 }
-/* line 66, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
+/* line 65, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
 .skin-slidedeck dl.slidedeck > dd {
   height: 294px;
   overflow: hidden;
@@ -567,7 +607,7 @@ div#slider-wrapper div#slider {
   padding: 0;
   margin: 0;
 }
-/* line 75, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
+/* line 74, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
 .skin-slidedeck dl.slidedeck > dt {
   color: #505050;
   cursor: pointer;
@@ -582,27 +622,27 @@ div#slider-wrapper div#slider {
   margin: 0;
   padding: 0;
 }
-/* line 94, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
+/* line 93, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
 .skin-slidedeck dl.slidedeck > dt.spine:hover {
   background-position: center left;
   color: black;
 }
-/* line 98, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
+/* line 97, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
 .skin-slidedeck dl.slidedeck > dt.spine:hover .index {
   color: black;
 }
-/* line 101, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
+/* line 100, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
 .skin-slidedeck dl.slidedeck > dt.spine.active, .skin-slidedeck dl.slidedeck > dt.spine.active:hover {
   background-position: bottom left;
   cursor: default;
   color: white;
 }
-/* line 106, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
+/* line 105, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
 .skin-slidedeck dl.slidedeck > dt.spine.active .index, .skin-slidedeck dl.slidedeck > dt.spine.active:hover .index {
   color: white;
   margin-bottom: 0;
 }
-/* line 112, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
+/* line 111, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
 .skin-slidedeck dl.slidedeck > dt.spine .index {
   color: #505050;
   font-family: Arial, Helvetica, sans-serif;
@@ -610,7 +650,7 @@ div#slider-wrapper div#slider {
   font-weight: normal;
   margin-bottom: 2px;
 }
-/* line 125, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
+/* line 124, /cygdrive/c/Users/Carlos Eduardo Melo/Projetos/redime.github.com/sass/screen/_slider.scss */
 .skin-slidedeck dl.slidedeck .activeCorner {
   background-image: url("/images/slider/corner.png");
   height: 25px;

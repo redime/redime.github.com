@@ -4,7 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 //@import 'http://fonts.googleapis.com/css?family=Lato:regular,italic,bold';
-@import 'http://fonts.googleapis.com/css?family=Open+Sans:regular,600,bold';
+//@import 'http://fonts.googleapis.com/css?family=Open+Sans:regular,600,bold';
 
 @import 'compass/css3/transition';
 @import 'screen/variables';
@@ -27,7 +27,10 @@ body {
 
   & > * {
     text-align: center;
-    visibility: hidden;
+
+    .no-flexbox & {
+      visibility: hidden;
+    }
 
     & > * {
       text-align: left;
@@ -46,7 +49,7 @@ a {
 
   color: $cool-gray-07;
 
-  .ie & img {
+  & img {
     border: none;
   }
 }
